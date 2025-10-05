@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mening TAP O'yinim</title>
+    <style>
+        /* Ko'rinish (CSS) - O'yinni markazga joylashtirish va ranglar */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #0d1117; /* Qorong'u fon */
+            color: white;
+            user-select: none;
+            overflow: hidden; /* Scroll bo'lmasligi uchun */
+        }
+        #coin-display {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #ffc400; /* Sariq rang */
+        }
+        #tap-area {
+            width: 250px;
+            height: 250px;
+            background-color: #ffd700; /* Coin rangi */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+            transition: transform 0.1s;
+        }
+        #tap-area:active {
+            transform: scale(0.95); /* Bosilganda kichrayish effekti */
+        }
+        .tap-text {
+            font-size: 6em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="coin-display">0</div>
+    
+    <div id="tap-area" onclick="handleTap()">
+        <span class="tap-text">T</span>
+    </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    
+    <script>
+        // --- Asosiy O'yin Mantiqi (JavaScript) ---
+        let coinCount = 0;
+        const coinDisplay = document.getElementById('coin-display');
+        
+        // Telegram Mini Ilovani tayyorlash
+        if (window.Telegram && window.Telegram.WebApp) {
+            Telegram.WebApp.ready();
+            Telegram.WebApp.expand(); // Ekranni to'liq ochish
+        }
+
+        // Bosish funksiyasi
+        function handleTap() {
+            // Har bosishda 1 coin qo'shamiz
+            coinCount += 1; 
+            coinDisplay.innerText = coinCount;
+
+            // DIQQAT: Hozirgi kunda bu faqat vizual. Haqiqiy saqlash uchun Back-end kerak!
+        }
+    </script>
+</body>
+</html>
