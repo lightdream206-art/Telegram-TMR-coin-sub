@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMR Coin Tap</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="stats">
+                <span id="balance">0</span> 💰
+            </div>
+            <div class="stats energy-bar-container">
+                <span id="energy">1000</span> / <span id="max-energy">1000</span> ⚡
+                <div id="energy-bar"></div>
+            </div>
+        </div>
+        
+        <div class="tap-area" id="tapArea">
+            <div id="coin-image">🪙</div>
+        </div>
+
+        <div class="nav">
+            <button class="nav-btn active">Tap</button>
+            <button class="nav-btn">Boosts</button>
+            <button class="nav-btn">Friends</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
