@@ -108,3 +108,74 @@ body {
     color: var(--tg-theme-button-text-color, #ffffff);
     font-weight: bold;
 }
+/* style.css ga qo'shimchalar */
+
+/* Ekranlarni Almashtirish */
+.screen {
+    display: none;
+    width: 100%;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* --- Boosts Sahifasi Uslubi --- */
+
+.boost-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.boost-item {
+    background-color: var(--tg-theme-secondary-bg-color, #303f9f);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.boost-icon {
+    font-size: 2em;
+    margin-right: 15px;
+}
+
+.boost-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.boost-info p {
+    font-size: 0.8em;
+    color: var(--tg-theme-hint-color, #9fa8da);
+    margin: 3px 0 0 0;
+}
+
+.buy-btn {
+    background-color: #ffeb3b; /* Sariq rang */
+    color: #000000;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap; /* Matnni bir qatorda ushlab turish */
+    margin-left: 10px;
+}
+
+.buy-btn:disabled {
+    background-color: #555;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+.boost-level {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    font-size: 0.75em;
+    color: var(--tg-theme-hint-color, #9fa8da);
+}
