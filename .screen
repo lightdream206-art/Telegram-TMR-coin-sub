@@ -1,0 +1,51 @@
+<body>
+    <div class="container">
+        <div class="header">
+            </div>
+
+        <div class="screen active" id="tap-screen">
+            <div class="tap-area" id="tapArea">
+                <div id="coin-image">🪙</div>
+            </div>
+        </div>
+
+        <div class="screen" id="boosts-screen">
+            <h2>Boosts (Kuchaytirishlar)</h2>
+            <div class="boost-list">
+                
+                <div class="boost-item" id="multitap-boost">
+                    <span class="boost-icon">✨</span>
+                    <div class="boost-info">
+                        <strong>Multitap</strong>
+                        <p>Bir marta bosishga beriladigan ballni oshirish</p>
+                    </div>
+                    <button class="buy-btn" data-boost-type="multitap">
+                        Sotib olish (<span id="multitap-cost">100</span> 💰)
+                    </button>
+                    <p class="boost-level">Level: <span id="multitap-level">1</span></p>
+                </div>
+
+                <div class="boost-item" id="energy-boost">
+                    <span class="boost-icon">🔋</span>
+                    <div class="boost-info">
+                        <strong>Energy Limit</strong>
+                        <p>Maksimal energiya hajmini oshirish</p>
+                    </div>
+                    <button class="buy-btn" data-boost-type="energy">
+                        Sotib olish (<span id="energy-cost">500</span> 💰)
+                    </button>
+                    <p class="boost-level">Level: <span id="energy-level">1</span></p>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="nav" id="navigation">
+            <button class="nav-btn active" data-target="tap-screen">Tap</button>
+            <button class="nav-btn" data-target="boosts-screen">Boosts</button>
+            <button class="nav-btn" data-target="friends-screen">Friends</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
